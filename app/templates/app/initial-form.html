@@ -5,7 +5,7 @@
 
 {% block body %}
     <h1>Form to initiate Game of life</h1>
-    <form>
+    <form action="{% url 'grid' %}">
         <label for="columns">Columns:
             <input type="text" name="columns" placeholder="x"><br>
         </label>
