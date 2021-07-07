@@ -10,16 +10,13 @@ class NewGameForm(forms.Form):
     generations = forms.IntegerField(label="generations")
 
 
-grid_data = []
-
-
 # Create your views here.
 def initial_form(request):
     if request.method == "POST":
         form = NewGameForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            grid_data.append(data)
+            request.session["grid_data"] = data
         return HttpResponseRedirect(reverse("grid"))
     else:
         return render(request, "app/initial-form.html", {
@@ -28,6 +25,8 @@ def initial_form(request):
 
 
 def grid(request):
+    if "grid_data" not in request.session:
+        request.session["grid_data"] = []
     return render(request, "app/grid.html", {
-        "grid_data": grid_data
+        "grid_data": request.session["grid_data"]
     })
