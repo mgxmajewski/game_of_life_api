@@ -2,12 +2,13 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.utils.safestring import mark_safe
 
 
 class NewGameForm(forms.Form):
-    columns = forms.IntegerField(label="columns")
-    rows = forms.IntegerField(label="rows")
-    generations = forms.IntegerField(label="generations")
+    columns = forms.IntegerField(label=mark_safe('columns'))
+    rows = forms.IntegerField(label=mark_safe('<br/>rows'))
+    generations = forms.IntegerField(label=mark_safe('<br/>generations'))
 
 
 # Create your views here.
