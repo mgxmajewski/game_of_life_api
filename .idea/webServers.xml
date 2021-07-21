@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ab9bc8d3-65f1-4c16-8cff-abd12fec804d" name="agilecat">
+        <fileTransfer rootFolder="/home/mgx" accessType="SFTP" host="77.55.208.120" port="22" sshConfigId="f6fd831e-814e-47f4-81c1-9ce1c698ad50" sshConfig="mgx@77.55.208.120:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="60000" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,12 +1,17 @@
 version: '3'
 
 services:
-#  db:
-#    image: postgres
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "mgx"
+      POSTGRES_PASSWORD: "agilecat"
 
   web:
     build: .
     volumes:
       - .:/home/mgxmajewski/PycharmProjects/game_of_life_api
     ports:
-      - "8000:8000"
+      - "80:8000"

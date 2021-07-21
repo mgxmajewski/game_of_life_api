@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6w@bmtf8s$en#(e8=cpt-&(-b51wj_g&k3f--$2-(@)sxtp+p#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', 'agilecat.io']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'game_of_life_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 
